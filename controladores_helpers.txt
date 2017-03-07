@@ -1,0 +1,15 @@
+index enlista todos los elementos de un recurso dado.
+new permite definir uno nuevo.
+create crea uno nuevo.
+show muestra uno solo.
+edit permite editarlo
+update lo cambia.
+destroy lo elimina.
+
+Un before filter se define con 'before_action' dentro de la clase del controlador deseado. De esta manera, todas las acciones de la clase y las clases que hereden de ella lo utilizarán.
+
+Las sesiones funcionan como en Sinatra. En el hash session se guarda la información de la sesión.
+
+El hash Flash nos permite desplegar errores en la vista siguiente. Solo se guarda en el siguiente redirect.
+
+Strong parameters evitan que haya asignaciones en masa.

@@ -1,0 +1,5 @@
+Para sabér qué rutas están accesibles en una aplicación Rails, se usa el comando rake routes.
+resources crea las relaciones entre los verbos HTTP más comunes y los controladores respectivos, en una sola línea.
+Las rutas que resources crea están disponibles en la documentación de ruby (http://guides.rubyonrails.org/routing.html#crud-verbs-and-actions).
+Para especificar la root url de mi aplicación se usa el método root o root to.
+Los nested resources son recursos que son "hijos" lógicos de otra resource. Son muy útiles para reflejar en nuestros controladores las relaciones que nuestros modelos puedan tener.
