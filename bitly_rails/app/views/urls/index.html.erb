@@ -1,0 +1,11 @@
+<h1>All urls</h1>
+<p><%= link_to 'Create url', new_url_path %></p>
+
+<table>
+  <tr><th>Url</th></tr>
+  <% @urls.each do |url| %>
+    <tr>
+      <td><%= url.original_url %></td>
+    </tr>
+  <% end %>
+</table>
