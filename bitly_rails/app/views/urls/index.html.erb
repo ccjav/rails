@@ -2,10 +2,14 @@
 <p><%= link_to 'Create url', new_url_path %></p>
 
 <table>
-  <tr><th>Url</th></tr>
+  <tr>
+  	<th>Url</th>
+  	<th>Short Url</th>
+  </tr>
   <% @urls.each do |url| %>
     <tr>
       <td><%= url.original_url %></td>
+      <td><%= url.short_url %></td>
     </tr>
   <% end %>
 </table>

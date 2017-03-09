@@ -24,12 +24,6 @@ class UrlsController < ApplicationController
   private
 
   def url_params
-    params.require(:url).permit(:original_url, short_url: shorten_link)
-  end
-
-  def shorten_link
-    o = [('a'..'z'), ('A'..'Z')].map(&:to_a).flatten
-    string = (0...6).map { o[rand(o.length)] }.join
-    "http://www.sho.rt/#{string}"
+    params.require(:url).permit(:original_url)
   end
 end
