@@ -1,0 +1,11 @@
+<h2>Add url</h2>
+<%= form_for([@user, @user.links.build]) do |f| %>
+  <p>
+    <%= f.label :original_link %><br>
+    <%= f.text_field :original_link %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
