@@ -5,7 +5,7 @@
 <h1>Slot Machine</h1>
 
 <div id="slot-machine">
-  <%= form_for :roll, url: rolls_path do |f| %>
+  <%= form_for :roll, url: rolls_path, remote: true do |f| %>
     <%= f.submit "SPIN", id: "submit" %>
   <% end %>
   <div id="die">

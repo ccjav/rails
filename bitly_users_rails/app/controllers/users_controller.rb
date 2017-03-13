@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
 	def new
 
-  	end
+  end
 
 	def create
 		@user = User.new(url_params)
