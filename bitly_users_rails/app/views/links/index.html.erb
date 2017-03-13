@@ -1,0 +1,14 @@
+<h1>All links</h1>
+
+<table>
+	<tr>
+		<th>Link</th>
+	<tr>
+
+	<% @urls.each do |link| %>
+		<tr>
+			<td><%= link.original_link %></td>
+			<td><%= link_to 'Show', url_path(link) %></td>
+		<tr>
+	<% end %>
+</table>
