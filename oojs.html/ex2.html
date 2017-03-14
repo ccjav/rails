@@ -42,7 +42,7 @@
 
       // var person1 = new Person('Bob');
       // var person2 = new Person('Sarah');
-
+      // constructor?
       function Person(first, last, age, gender, interests) {
         this.name = {
           first,
@@ -50,15 +50,57 @@
         };
         this.age = age;
         this.gender = gender;
-        this.interests = interests;
-        this.bio = function() {
-          alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');          
-        };
-        this.greeting = function() {
+        this.interests = interests;      
+      };
+
+
+      Person.prototype.bio = function() {
+        alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');          
+      };
+
+      Person.prototype.greeting = function() {
           alert('Hi! I\'m ' + this.name.first + '.');
-        };
+      };
+
+      Person.prototype.farewell = function() {
+        alert(this.name.first + ' has left the building. Bye for now!');
       };
 
       var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+
+      function Teacher(first, last, age, gender, interests, subject) {
+        Person.call(this, first, last, age, gender, interests);
+        this.subject = subject;
+      }
+
+      Teacher.prototype = Object.create(Person.prototype);
+      Teacher.prototype.constructor = Teacher;
+
+      Teacher.prototype.greeting = function() {
+        var prefix;
+
+        if (this.gender === 'male' || this.gender === 'Male') {
+          prefix = 'Mr.';
+        } else if (this.gender === 'female' || this.gender === 'Female') {
+          prefix = 'Mrs.';
+        }
+
+        alert('Hello. My name is ' + prefix + ' ' + this.name.last + ', and I teach ' + this.subject + '.');
+      };
+
+      var teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cooking'], 'mathematics');
+
+      function Student(first, last, age, gender, interests) {
+        Person.call(this, first, last, age, gender, interests);
+      }
+
+      Student.prototype = Object.create(Person.prototype);
+      Student.prototype.constructor = Student;
+
+      Student.prototype.greeting = function() {
+        alert('Yo, I\'m ' + this.name.first);
+      }
+
+      var student1 = new Student('Jose', 'Cholo', 14, 'male', ['javascript']);
     </script>
 </html>

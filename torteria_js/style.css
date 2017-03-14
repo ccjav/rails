@@ -32,9 +32,11 @@
 	width: 145px;
 	height: 90px;
 	position: relative;
-	top: -54px;
+	top: 50px;
 	left: 309px;
 	border: 2px solid #999;
+	text-align: center;
+	color: white;
 }
 
 #countdown {
@@ -75,4 +77,10 @@
 
 .Casi-listo {
 	background-color: #FF7F00;
+}
+
+.oven-display {
+	position: relative;
+	top: 6.2em;
+	left: 10.3em;
 }

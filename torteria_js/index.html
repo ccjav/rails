@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <link rel="stylesheet" type="text/css" href="normalize.css">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
@@ -11,15 +12,24 @@
 <body>
   <div class="container">
     <h1 id="main-title">Torter&iacute;a JS</h1>
-    <form class="create-oven" action="" method="post">
+    <form id="createOven" class="create-oven" action="" method="post">
       <input class="form-group" type="submit" value="Crear Horno">
     </form>
     <div class="oven">
       <div id="timer"></div>
+      <form id="ovenForm" class="oven-display" action="" method="post">
+        <input id="tipoTorta" class="oven-input" type="text" value="" placeholder="Tipo">
+        <input id="time" class="oven-input" type="text" value="" placeholder="Tiempo">
+        <input class="oven-input" type="submit" value="Cocinar">
+      </form>
       <div class="clear"></div>
     </div>
-    <ol id="history">
-    </ol>
+    <div id="history">
+      <h2>Recién salidas</h2> 
+      <ol>
+      </ol>
+    </div>
+      
   </div>
 
   <script src="javascript.js"></script>
