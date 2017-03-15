@@ -1,0 +1,58 @@
+.menu {
+  background-color: #999;
+  position: fixed;
+  height: 100%;
+  width: 10%;
+  top: 0;
+  left: 0;
+}
+
+#board {
+  font-family: monospace;
+  background-color: #9e8d68;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+  width: 90%;
+  right: 0;
+}
+
+.post-it {
+  position: absolute !important;
+  width: 160px;
+  background-color: yellow;
+  box-shadow: -2px 2px 5px #555;
+  overflow: hidden;
+}
+
+.post-it .header {
+  background-color: #c2c25b;
+  text-align: right;
+  padding: 2px;
+}
+
+.post-it .header:hover {
+  background-color: #a8a860;
+}
+
+.post-it .header a, .post-it .header a:visited {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.post-it .header a:hover {
+  color: #eee;
+}
+
+.post-it .content {
+  padding: 10px;
+  min-height: 70px;
+  outline: none;
+}
+
+.close {
+  cursor: pointer; cursor: hand;
+  display: inline-block;
+}
