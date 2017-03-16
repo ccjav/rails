@@ -7,15 +7,16 @@
   left: 0;
 }
 
-#board {
+.board {
   font-family: monospace;
   background-color: #9e8d68;
   margin: 0;
   padding: 0;
-  position: relative;
+  position: absolute;
   height: 100%;
   width: 90%;
   right: 0;
+  top: 0;
 }
 
 .post-it {
